@@ -76,4 +76,4 @@ export const authenticateUser = async ({ email, password }) => {
     logger.error(`Error authenticating user: ${e}`);
     throw e;
   }
-}
+};

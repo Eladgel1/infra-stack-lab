@@ -4,3 +4,4 @@ node_modules
 .env.production
 .agents
 skills-lock.json
+.neon_local

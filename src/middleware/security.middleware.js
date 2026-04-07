@@ -27,25 +27,6 @@ const securityMiddleware = async (req, res, next) => {
     const client = aj.withRule(slidingWindow({ mode: 'LIVE', interval: '1m', max: limit, name: `${role}-rate-limit` }));
     const decision = await client.protect(req);
 
-    for (const result of decision.results) {
-        const { reason } = result;
-
-        logger.info('Arcjet result', {
-            path: req.path,
-            ip: req.ip,
-            userAgent: req.get('user-agent'),
-            conclusion: result.conclusion,
-            state: result.state,
-            isBot: reason?.isBot?.() ?? false,
-            isRateLimit: reason?.isRateLimit?.() ?? false,
-            isShield: reason?.isShield?.() ?? false,
-            allowedBots: reason?.allowed ?? [],
-            deniedBots: reason?.denied ?? [],
-            spoofed: reason?.isSpoofed?.() ? reason.spoofed : [],
-            verified: reason?.isVerified?.() ? reason.verified : [],
-        });
-    }
-
     if (decision.isDenied() && decision.reason.isBot()) {
       logger.warn('Bot request blocked', { ip: req.ip, userAgent: req.get('User-Agent'), path: req.path });
 

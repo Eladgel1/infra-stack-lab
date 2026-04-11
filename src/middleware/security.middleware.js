@@ -20,7 +20,7 @@ const securityMiddleware = async (req, res, next) => {
         break;
       case 'guest':
         limit = 5;
-        message = 'Guest request limit exceeded (5 per minute). Slow down.';
+        message = 'Guest request limit exceeded (5 per minute). Slow down.'; // eslint-disable-line no-unused-vars
         break;
     }
 

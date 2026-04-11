@@ -580,3 +580,22 @@
 {"level":"info","message":"::1 - - [11/Apr/2026:11:59:02 +0000] \"GET /api/auth/sign-out HTTP/1.1\" 404 156 \"-\" \"PostmanRuntime/7.51.1\"","service":"infra-stack-lab-api"}
 {"level":"info","message":"User signed out successfully","service":"infra-stack-lab-api"}
 {"level":"info","message":"::1 - - [11/Apr/2026:11:59:06 +0000] \"POST /api/auth/sign-out HTTP/1.1\" 200 42 \"-\" \"PostmanRuntime/7.51.1\"","service":"infra-stack-lab-api"}
+{"level":"info","message":"::1 - - [11/Apr/2026:12:15:02 +0000] \"GET /api HTTP/1.1\" 200 39 \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36\"","service":"infra-stack-lab-api"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [11/Apr/2026:12:20:48 +0000] \"GET /health HTTP/1.1\" 200 73 \"-\" \"-\"","service":"infra-stack-lab-api"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [11/Apr/2026:12:20:48 +0000] \"GET /api HTTP/1.1\" 200 39 \"-\" \"-\"","service":"infra-stack-lab-api"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [11/Apr/2026:12:20:48 +0000] \"GET /nonexistent HTTP/1.1\" 404 27 \"-\" \"-\"","service":"infra-stack-lab-api"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [11/Apr/2026:12:23:25 +0000] \"GET /health HTTP/1.1\" 200 73 \"-\" \"-\"","service":"infra-stack-lab-api"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [11/Apr/2026:12:23:25 +0000] \"GET /api HTTP/1.1\" 200 39 \"-\" \"-\"","service":"infra-stack-lab-api"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [11/Apr/2026:12:23:25 +0000] \"GET /nonexistent HTTP/1.1\" 404 27 \"-\" \"-\"","service":"infra-stack-lab-api"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [11/Apr/2026:12:25:33 +0000] \"GET /health HTTP/1.1\" 200 73 \"-\" \"-\"","service":"infra-stack-lab-api"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [11/Apr/2026:12:25:33 +0000] \"GET /api HTTP/1.1\" 200 39 \"-\" \"-\"","service":"infra-stack-lab-api"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [11/Apr/2026:12:25:33 +0000] \"GET /nonexistent HTTP/1.1\" 404 27 \"-\" \"-\"","service":"infra-stack-lab-api"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [11/Apr/2026:12:26:34 +0000] \"GET /health HTTP/1.1\" 200 73 \"-\" \"-\"","service":"infra-stack-lab-api"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [11/Apr/2026:12:26:34 +0000] \"GET /api HTTP/1.1\" 200 39 \"-\" \"-\"","service":"infra-stack-lab-api"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [11/Apr/2026:12:26:34 +0000] \"GET /nonexistent HTTP/1.1\" 404 27 \"-\" \"-\"","service":"infra-stack-lab-api"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [11/Apr/2026:12:27:04 +0000] \"GET /health HTTP/1.1\" 200 73 \"-\" \"-\"","service":"infra-stack-lab-api"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [11/Apr/2026:12:27:04 +0000] \"GET /api HTTP/1.1\" 200 39 \"-\" \"-\"","service":"infra-stack-lab-api"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [11/Apr/2026:12:27:04 +0000] \"GET /nonexistent HTTP/1.1\" 404 27 \"-\" \"-\"","service":"infra-stack-lab-api"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [11/Apr/2026:12:27:11 +0000] \"GET /health HTTP/1.1\" 200 73 \"-\" \"-\"","service":"infra-stack-lab-api"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [11/Apr/2026:12:27:11 +0000] \"GET /api HTTP/1.1\" 200 39 \"-\" \"-\"","service":"infra-stack-lab-api"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [11/Apr/2026:12:27:11 +0000] \"GET /nonexistent HTTP/1.1\" 404 27 \"-\" \"-\"","service":"infra-stack-lab-api"}

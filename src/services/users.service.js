@@ -13,7 +13,8 @@ export const getAllUsers = async () => {
         role: users.role,
         created_at: users.created_at,
         updated_at: users.updated_at,
-      }).from(users);
+      })
+      .from(users);
   } catch (e) {
     logger.error('Error getting users ', e);
     throw e;
@@ -34,7 +35,7 @@ export const getUserById = async id => {
       .from(users)
       .where(eq(users.id, id))
       .limit(1);
-    
+
     if (!user) {
       throw new Error('User not found');
     }
@@ -103,7 +104,7 @@ export const deleteUser = async id => {
         id: users.id,
         email: users.email,
         name: users.name,
-        role: users.role
+        role: users.role,
       });
 
     logger.info(`User ${deletedUser.email} deleted successfully`);

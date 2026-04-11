@@ -19,7 +19,11 @@ export const signup = async (req, res, next) => {
     const { name, email, password, role } = validationResult.data;
 
     const user = await createUser({ name, email, password, role });
-    const token = jwttoken.sign({ id: user.id, email: user.email, role: user.role });
+    const token = jwttoken.sign({
+      id: user.id,
+      email: user.email,
+      role: user.role,
+    });
 
     cookies.set(res, 'token', token);
 
@@ -27,8 +31,11 @@ export const signup = async (req, res, next) => {
     res.status(201).json({
       message: 'User registered',
       user: {
-        id: user.id, name: user.name, email: user.email, role: user.role
-      }
+        id: user.id,
+        name: user.name,
+        email: user.email,
+        role: user.role,
+      },
     });
   } catch (e) {
     logger.error('Signup error', e);

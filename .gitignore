@@ -6,3 +6,6 @@ coverage
 .agents
 skills-lock.json
 .neon_local
+
+# Kubernetes secrets
+k8s/secret.yaml

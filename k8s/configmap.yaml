@@ -7,7 +7,7 @@ metadata:
     app.kubernetes.io/name: infra-stack-lab
     app.kubernetes.io/component: api
 data:
-  PORT: "3000"
-  NODE_ENV: "production"
-  LOG_LEVEL: "info"
-  CORS_ORIGIN: "http://infra-stack-lab.local"
+  PORT: '3000'
+  NODE_ENV: 'production'
+  LOG_LEVEL: 'info'
+  CORS_ORIGIN: 'http://infra-stack-lab.local'

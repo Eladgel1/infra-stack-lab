@@ -15,10 +15,10 @@ echo "K8s setup started"
 echo "Namespace: ${NAMESPACE}"
 echo "========================================"
 
-echo "[1/5] Applying namespace..."
+echo "[1/7] Applying namespace..."
 kubectl apply -f k8s/namespace.yaml
 
-echo "[2/5] Applying configmap..."
+echo "[2/7] Applying configmap..."
 kubectl apply -f k8s/configmap.yaml
 
 if [ ! -f "k8s/secret.yaml" ]; then
@@ -27,14 +27,20 @@ if [ ! -f "k8s/secret.yaml" ]; then
   exit 1
 fi
 
-echo "[3/5] Applying secret..."
+echo "[3/7] Applying secret..."
 kubectl apply -f k8s/secret.yaml
 
-echo "[4/5] Applying deployment..."
+echo "[4/7] Applying deployment..."
 kubectl apply -f k8s/deployment.yaml
 
-echo "[5/5] Applying service..."
+echo "[5/7] Applying service..."
 kubectl apply -f k8s/service.yaml
+
+echo "[6/7] Applying ingress..."
+kubectl apply -f k8s/ingress.yaml
+
+echo "[7/7] Applying HPA..."
+kubectl apply -f k8s/hpa.yaml
 
 echo "========================================"
 echo "K8s setup completed successfully"

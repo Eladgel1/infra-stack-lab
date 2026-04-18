@@ -22,5 +22,13 @@ echo "Services:"
 kubectl get svc -n "${NAMESPACE}"
 
 echo
+echo "Ingress:"
+kubectl get ingress -n "${NAMESPACE}"
+
+echo
+echo "HPA:"
+kubectl get hpa -n "${NAMESPACE}"
+
+echo
 echo "All resources:"
 kubectl get all -n "${NAMESPACE}"

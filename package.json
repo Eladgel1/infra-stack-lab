@@ -25,6 +25,10 @@
     "db:studio": "drizzle-kit studio",
     "dev:docker": "sh ./scripts/dev.sh",
     "prod:docker": "sh ./scripts/prod.sh",
+    "k8s:setup": "sh ./scripts/k8s-setup.sh",
+    "k8s:redeploy": "sh ./scripts/k8s-redeploy.sh",
+    "k8s:status": "sh ./scripts/k8s-status.sh",
+    "k8s:up": "npm run k8s:setup && npm run k8s:redeploy && npm run k8s:status",
     "test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest"
   },
   "keywords": [],
